@@ -1,0 +1,73 @@
+$center : center;
+$bgcolor : black;
+
+
+@mixin formstyle {
+    background-color: rgb(131, 196, 250);
+    border: 2px solid $bgcolor;
+    height: 700px;
+    width: 600px;
+    margin: auto
+}
+
+.home{
+    @include formstyle();
+}
+.heading{
+    text-align: $center;
+}
+.homecontent{
+    @extend .heading;
+}
+.btn1{
+    background-color: $bgcolor;
+    color: white;
+    width: 150px;
+    height: 50px;
+}
+.reg{
+    @include formstyle();
+}
+.regheding{
+    @extend .heading;
+}
+@mixin inputstyle {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 25px;
+}
+
+.h1{
+    @include inputstyle();
+}
+.h2{
+    @include inputstyle();
+}
+.h3{
+    @include inputstyle();  
+}
+.h4{
+    @include inputstyle();
+}
+.h5{
+    display: flex;
+}
+.btn2{
+    @extend .btn1;
+    margin: {
+        left: 200px;
+        top: 35px;  
+      };
+}
+
+.view{
+    @include formstyle();
+}
+.viewhead{
+    @extend .heading
+}
+.detail{
+    display: flex;
+    justify-content: space-around;
+}
