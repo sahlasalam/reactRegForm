@@ -46,52 +46,44 @@ function Register() {
         <hr />
       </div>
 
-      <div>
-        <div className="h1">
-          <h5 htmlFor="name">Name</h5>
+      <div className="form-wrapper">
+        <div className="name-wrapper square">
+          <label  htmlFor="name">Name</label><br/>
           <input type={"text"} name="name" onChange={enterDetail}></input>
-          <h5 htmlFor="email">Email</h5>
-          <input
-            type={"email"}
-            name="email"
-            id="email"
-            onChange={enterDetail}
-          ></input>
         </div>
-        <div className="h2">
-          <h5>Gender</h5>
-          <p htmlFor="gender">F</p>
-          <input
-            type={"radio"}
-            name="gender"
-            value="Female"
-            onChange={enterDetail}
-          ></input>
-          <p htmlFor="gender">M</p>
-          <input
-            type={"radio"}
-            name="gender"
-            value="Male"
-            onChange={enterDetail}
-          ></input>
-          <h5 htmlFor="dob">DOB</h5>
+
+        <div className="email-wrapper square">
+          <label htmlFor="email">Email</label><br/>
+          <input type={"email"} name="email" id="email" onChange={enterDetail}></input>
+        </div>
+
+        <div className="dob-wrapper square">          
+          <label htmlFor="dob">DOB</label><br/>
           <input type={"date"} name="dob" onChange={enterDetail}></input>
         </div>
-        <div className="h3">
-          <h5 htmlFor="address">address</h5>
-          <input type={"text"} name="address" onChange={enterDetail}></input>
+
+        <div className="adr-wrapper square">
+          <label htmlFor="address">Address</label><br/>
+         <input type={"text"} name="address" onChange={enterDetail}></input>
         </div>
-        <div className="h4">
-          <h5 htmlFor="phone">Phone</h5>
+
+        <div className="num-wrapper square">
+          <label htmlFor="phone">Phone</label><br/>
           <input type={"number"} name="phone" onChange={enterDetail}></input>
-          <h5 htmlFor="state">State</h5>
+        </div>
+
+        <div className="state-wrapper square">
+            <label htmlFor="state">State</label><br/>
           <select name="state" onChange={enterDetail}>
             <option>select</option>
             <option value="kerala">Kerala</option>
             <option value="karnataka">Karnataka</option>
             <option value="tamilnadu">Tamilnadu</option>
           </select>
-          <h5 htmlFor="country">Country</h5>
+        </div>
+
+        <div className="country-wrapper square">
+          <label htmlFor="country">Country</label><br/>
           <select name="country" onChange={enterDetail}>
             <option>select</option>
             <option value="India">India</option>
@@ -99,15 +91,22 @@ function Register() {
             <option value="London">London</option>
           </select>
         </div>
-        <div className="h5">
-          <input
-            type={"checkbox"}
-            name="accept"
-            id="accept"
-            onChange={enterDetail}
-          ></input>
-          <h5 htmlFor="accept">Accept all terms and conditions</h5>
+
+        <div className="gender-wrapper square">
+          <label>Gender</label><br/>
+          <p htmlFor="gender">Female</p>
+            <input type={"radio"} name="gender" value="Female" onChange={enterDetail}></input>
+          <p htmlFor="gender">Male</p>
+            <input type={"radio"} name="gender" value="Male" onChange={enterDetail}></input>
         </div>
+
+
+
+        <div className="check-wrapper">
+          <input type={"checkbox"} name="accept" id="accept" onChange={enterDetail}></input>
+          <p htmlFor="accept">Accept all terms and conditions</p>
+        </div>
+
         <button className="btn2" onClick={navigateToView}>
           Register
         </button>

@@ -5,9 +5,9 @@ $bgcolor : black;
 @mixin formstyle {
     background-color: rgb(131, 196, 250);
     border: 2px solid $bgcolor;
-    height: 700px;
+    height: 750px;
     width: 600px;
-    margin: auto
+    margin: auto;
 }
 
 .home{
@@ -31,43 +31,60 @@ $bgcolor : black;
 .regheding{
     @extend .heading;
 }
-@mixin inputstyle {
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    padding: 25px;
-}
 
-.h1{
-    @include inputstyle();
+label{
+    padding-left: 15px; 
+    font-size: 20px;
 }
-.h2{
-    @include inputstyle();
+@mixin boxsize {
+    width: 300px;
+    height: 70px;
+    display: inline-block
 }
-.h3{
-    @include inputstyle();  
+.name-wrapper{
+    @include boxsize;
 }
-.h4{
-    @include inputstyle();
+.email-wrapper{
+    @include boxsize;
 }
-.h5{
-    display: flex;
+.gender-wrapper{
+    @include boxsize;
+}
+.dob-wrapper{
+    @include boxsize;   
+}
+.adr-wrapper{
+    @include boxsize;   
+}
+.num-wrapper{
+    @include boxsize;   
+}
+.state-wrapper{
+    @include boxsize;   
+}
+.country-wrapper{
+    @include boxsize;   
 }
 .btn2{
     @extend .btn1;
     margin: {
         left: 200px;
-        top: 35px;  
+        top : 30px;
       };
 }
 
 .view{
     @include formstyle();
 }
+
 .viewhead{
     @extend .heading
 }
-.detail{
-    display: flex;
-    justify-content: space-around;
+input, select{
+    margin-left: 12px;
+    height: 25px;
+}
+p{
+    display: inline-block;
+    margin-left: 20px;
 }

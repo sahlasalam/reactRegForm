@@ -51,6 +51,11 @@ function View() {
             <h3>Country    :</h3>
             <h3>{location.state.country}</h3>
         </div>
+        <div className='detail'>
+            <h3>Accept    :</h3>
+            <h3>{location.state.accept}</h3>
+        </div>
+
 
 
         <button className='btn2' onClick={navigateToHome}>Back Home</button>
